@@ -102,10 +102,16 @@ td{
     font-size: 24px;
 }
 img{
-    width: 14%;
+    width:40%;
     margin: 0px;
     padding: 0px;
-    border-radius: 20px;   
+    border-radius: 20px;  
+    position: relative;
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    
 }
 #container{
 width: 100%;
