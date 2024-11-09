@@ -1,0 +1,223 @@
+
+*{
+    margin: 0px;
+    padding: 0;
+}
+::marker{
+    color: gold;
+}
+::selection{
+    color: gold;
+    background-color: gray;
+}
+
+header{
+    border: solid 2px black;
+    background:linear-gradient(rgb(241, 215, 62),gray);
+    text-align: center;
+    font-family: 'spicemen' sans-serif;
+    padding: 20px;
+    border-radius: 20px;
+}
+nav{
+border: solid 2px black;
+    background-color: gray;
+    font-family: 'spicemen' sans-serif;
+    border-radius: 20px;
+    margin: 1px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  } 
+nav a{
+    text-decoration: none;
+    color:black;
+    display: inline;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+nav a:hover{
+color: red;
+font-size: 115%;
+}
+
+#A5{
+margin: 15PX;
+font-family: 'Arial Narrow', Arial, sans-serif;
+color: whitesmoke;
+}
+#RED{
+    color: rgb(211, 30, 30);
+}
+body{
+    background-image: url('Test 1.jfif');
+    background-size: 200px;
+}
+#f1 table{
+border: solid 3px gold;
+   border-spacing: 0px;
+    width: 60%;
+    height: 40%;
+ position: relative;
+ left: 20%;
+}
+
+
+
+h2{
+    color: white;
+    font-size: 28px;
+    margin: 10px 20px;
+}
+section h1{
+    color: rgb(226, 228, 135);
+    text-align: center;
+}
+th{
+    border: solid 2px black;
+    text-align: center;
+    font-size: 30px;
+    background-color: rgb(87, 83, 83);
+    font-size: 13px;
+}
+tr,td{
+    border: solid 2px black;
+padding: 10px;
+text-align: center;
+background-color: gray;
+}
+td{
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+}
+#A8{
+    padding: 20px;
+}
+#s2{
+    text-align: center;
+    font-size: 24px;
+}
+img{
+    width: 14%;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 20px;   
+}
+#container{
+width: 100%;
+height: auto;
+}
+#box{
+    width: 200px;
+    height: 200px;
+
+}
+div{
+    display: inline;
+    position: relative;
+}
+audio{
+background-color: rgb(255, 223, 39);
+width: 33%;
+padding: 0;
+margin: 0;
+}
+#Q4{
+font-size: 28px;
+}
+footer{
+    border: solid 2px black;
+    background:linear-gradient(gray,rgb(241, 215, 62));
+    text-align: center;
+    font-family: 'spicemen' sans-serif;
+    padding: 20px;
+    border-radius: 20px;
+    
+}
+#SC{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+#SC a{
+    background-color: white;
+    padding: 1px;
+    border-radius: 50%;
+    height: 64px;
+    width: 64px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 5px 10px rgb(0,0,0,0.05);
+    
+}
+#SC a svg{
+height: 32px;
+}
+#s77{
+fill: rgb(24, 98, 194);
+}
+#s66{
+fill: rgb(255, 0, 149);
+}
+#s55{
+    fill: red;
+}
+#SC a::before{
+    content:attr(data-social);
+    position: absolute;
+    background-color:var(--accent-color);
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em ;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px black;
+    transform: translateY(-30px) rotate(25deg);
+    opacity: 0;
+    transition: 200ms cubic-bezier(0.47, -0.13, 0.28, 1.81);
+}
+#SC a:hover{
+ background-color: var(--accent-color);
+ fill: white;
+}
+#SC a::after{
+    content:'';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: solid 8px transparent;
+    border-right: solid 8px transparent;
+    border-top: solid 10px var(--accent-color);
+    transform: translateY(0) rotate(25deg);
+    opacity: 0;
+    transition: 200ms cubic-bezier(0.47, -0.13, 0.28, 1.81);
+}
+#SC a:hover::before{
+    transform: translateY(-65px) rotate(0);
+    opacity: 1;
+}
+#SC a:hover::after{
+    transform: translateY(-44px) rotate(0);
+    opacity: 1;
+}
+#dd{
+    float: left;}
+ 
+@media(max-width:770px) {
+img{
+    width: 100%;
+}
+audio{
+    width: 32.6%;  
+   
+}
+footer{
+    position: absolute;
+}
+}
+
