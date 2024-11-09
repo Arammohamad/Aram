@@ -59,11 +59,12 @@ body{
 }
 #f1 table{
 border: solid 3px gold;
-   border-spacing: 0px;
-    width: 60%;
-    height: 40%;
+ border-spacing: 0px;
  position: relative;
- left: 20%;
+ display: flex;
+ justify-self: center;
+ justify-content: center;
+ align-items: center;
 }
 
 
@@ -115,10 +116,10 @@ height: auto;
     height: 200px;
 
 }
-div{
+/* div{
     display: inline;
     position: relative;
-}
+} */
 audio{
 background-color: rgb(255, 223, 39);
 width: 33%;
@@ -206,18 +207,19 @@ fill: rgb(255, 0, 149);
     opacity: 1;
 }
 #dd{
-    float: left;}
- 
+ text-align: center;}
+
 @media(max-width:770px) {
 img{
     width: 100%;
 }
 audio{
-    width: 32.6%;  
+    width:100%;  
    
 }
 footer{
-    position: absolute;
+position: absolute;
+width: 100%;
 }
 }
 
