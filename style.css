@@ -36,7 +36,7 @@ nav a{
     text-decoration: none;
     color:black;
     display: inline;
-    padding: 20px;
+    padding: 15px;
     font-weight: bold;
     font-size: 16px;
 }
@@ -54,9 +54,9 @@ color: whitesmoke;
     color: rgb(211, 30, 30);
 }
 body{
-    /* background-image: url('Test 1.jfif'); */
-    /* background-size: 200px; */
-    background-color: blueviolet;
+    background-image: url('Test 1.jfif'); 
+     background-size: 200px;
+  
 }
 #f1 table{
 border: solid 3px gold;
