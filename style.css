@@ -1,8 +1,151 @@
+    /* ---------------------- Background color  ----------------------------------------------*/
+    :root{
+        --bg-purple:hsla(267,100%,63%,1);
+        --bg-purple-alpha-30: hsla(267,100%,63%,0.3);
+        --bg-dark-purple:hsla(279,42%,9%,1);
+        --bg-oxford-blue:hsla(240,63%,13%,1);
+        --bg-oxford-blue-alpha-95:hsla(240,63%,13%,0.95);
+        --bg-oxford-blue-alpha-90:hsla(240,63%,13%,0.9);
+        --bg-oxford-blue-alpha-80:hsla(240,63%,13%,0.8);
 
-*{
-    margin: 0px;
-    padding: 0;
+        /* Gradient color */
+--gradient-1: linear-gradient(to right bottom, hsl(299, 100%, 52%), hsl(291, 100%, 58%), hsl(283, 100%, 60%), hsl(273, 100%, 62%), hsl(262, 100%, 63%), hsl(242, 100%, 69%), hsl(223, 100%, 62%), hsl(210, 100%, 50%), hsl(203, 100%, 50%), hsl(198, 100%, 50%), hsl(192, 100%, 48%), hsl(185, 90%, 48%));
+--gradient-2: linear-gradient(90deg, transparent 0%, #9841ff 50%, transparent 100%);
+
+/*Text color */
+--text-white: hsla(0, 0%, 100%, 1);
+--text-gainsboro: hsla(0, 0%, 87%, 1);
+--text-champagne-pink: hsla(23, 61%, 86%, 1);
+--text-purple: hsla(267, 100%, 63%, 1);
+--border-space-cadet: hsl(240, 45%, 17%);
+--border-purple-alpha-30: hsla(267, 100%, 63%, 0.3);
+--fontFamily-oxanium: 'Oxanium', cursive;
+--fontFamily-work-sans: 'Work Sans', sans-serif;
+
+--fontSize-1: 3.6rem;
+--fontSize-2: 2.4rem;
+--fontSize-3: 2rem;
+--fontSize-4: 1.7rem;
+--fontSize-5: 1.6rem;
+--fontSize-6: 1.5rem;
+--fontSize-7: 1.4rem;
+--fontSize-8: 1.2rem;
+
+--weight-regular: 400;
+--weight-semiBold: 600;
+--weight-bold: 700;
+
+--section-spacing: 60px;
+
+--shadow: 0px 2px 5px 0px hsla(0, 0%, 0%, 0.2);
+
+--radius-circle: 50%;
+--radius-5: 5px;
+--radius-3: 3px;
+
+--clip-path-1: polygon(0 0, 100% 0, 100% 0, 0 0);
+--clip-path-2: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+--clip-path-3: polygon(0% 0%, 90% 0, 100% 30%, 100% 100%, 0 100%);
+--clip-path-4: polygon(90% 0, 100% 40%, 100% 100%, 0 100%, 0 0);
+--clip-path-5: polygon(100% 0, 100% 100%, 10% 100%, 0 60%, 0 0);
+--clip-path-6: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 40%);
+--clip-path-7: polygon(100% 0, 100% 60%, 90% 100%, 0 100%, 0 0);
+--clip-path-8: polygon(0% 0%, 70% 0, 100% 30%, 100% 100%, 0 100%);
+--clip-path-9: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+
+--transition-1: 250ms ease;
+--transition-2: 500ms ease;
+--cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
+        }
+
+    button{ background:none;
+            border: none; font:inherit;}
+            button{cursor: pointer;}
+button,span,a{
+    display: block;
 }
+a{text-decoration: none;
+    color: inherit;
+}
+li{list-style: none;}
+.header{position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+ background-color: var(--bg-oxford-blue);
+padding: 10px 12px;
+z-index: 4;
+}
+.container{padding-inline: 12px;}
+.header.active{
+    position: fixed;
+    animation: slideUP 1s ease forwards;
+}
+@keyframes slideUP{
+0% {transform: translateY(-100%);}
+100% {transform: translateY(0%);}
+}
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-toggle-btn .line{
+    height: 3px;
+    width: 10px;
+    margin-block: 4px;
+    background-color: var(--text-gainsboro);
+    border-radius: 8px; 
+    transition: var(--transition-1);
+    }
+.nav-toggle-btn .line-2{width: 20px;}
+.nav-toggle-btn .line-3{margin-inline-start: auto;}
+.nav-toggle-btn.active .line-2{transform: rotate(-45deg);}
+.nav-toggle-btn.active .line-1{transform: rotate(45deg) translate(4px,1.5px) ;}
+.nav-toggle-btn.active .line-3{transform: rotate(45deg) translate(-3px,-1px);}
+
+.line{
+    margin: 0 8px;
+}
+.navbar{
+    position: absolute;
+    top: calc(100% - 1px);
+    right: 12px;
+    left: 12px;
+    background-color:gray;
+    padding: 0 15px;
+    clip-path: var(--clip-path-1);
+    visibility: hidden;
+    transition: clip-path 500ms var(--cubic-out);
+}
+.navbar.active{
+    clip-path: var(--clip-path-2);
+    visibility: visible;
+}
+.navlink{
+    padding: 12px 25px;
+    text-transform: uppercase;
+    font-size: var(--fontSize-7);
+    font-family: var(--weight-semiBold);
+    color: var(--text-white);
+}
+.navitem{
+border-block-start:1px solid var(--border-space-cadet) ;
+}
+.navitem:last-child{border-block-end:1px solid var(--border-space-cadet);}
+
+
+
+::-webkit-scrollbar{width: 3px;}
+::-webkit-scrollbar-track{background-color:rgb(167, 164, 164);}
+::-webkit-scrollbar-thumb{background-color:goldenrod;}
+
+
+
+
+*,*::before,*::after{margin: 0px; padding: 0px; box-sizing: border-box;}
+
 ::marker{
     color: gold;
 }
@@ -18,33 +161,10 @@ header{
     font-family: 'spicemen' sans-serif;
     padding: 20px;
     border-radius: 20px;
+    position: fixed;
+    top: 0;
 }
-nav{
-border: solid 2px black;
-    background-color: gray;
-    font-family: 'spicemen' sans-serif;
-    border-radius: 20px;
-    margin: 1px;
-    height: 50px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     
-  } 
-nav a{
-    text-decoration: none;
-    color:black;
-    display: inline;
-    padding: 15px;
-    font-weight: bold;
-    font-size: 16px;
-}
-nav a:hover{
-color: red;
-font-size: 115%;
-}
-
 #A5{
 margin: 15PX;
 font-family: 'Arial Narrow', Arial, sans-serif;
@@ -55,8 +175,8 @@ color: whitesmoke;
 }
 body{
     background-image: url('Test 1.jfif'); 
-     background-size: 200px;
-  
+    background-size: 200px; 
+   padding-top: 50px;
 }
 #f1 table{
 border: solid 3px gold;
@@ -206,6 +326,14 @@ fill: rgb(255, 0, 149);
 }
 #dd{
  text-align: center;}
+
+ .card{
+    border-radius: 20px;
+    border: solid yellow 2px;
+    margin: 6px 6px;
+    background-image: url("test 2.jpg");
+    background-size: 115px;
+ }
 
 @media(max-width:800px) {
  

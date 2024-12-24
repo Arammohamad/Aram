@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARAM M</title>
+    <title>ARAM Mohamad</title>
     <link rel="preconnect" href="https://fonts.google.com">
     <link href="https://fonts.google.com/specimen/Bitter">
     <link rel="stylesheet" href="style.css">
@@ -11,17 +11,29 @@
     <meta name="keywords" content="Aram , mohamad,ARAM MOHAMAD , aram mohamad, AKM, A.K.M, IT">
 </head>
 <body>
-<header><h1>ARAM MOHAMAD</h1></header>
-<nav>
-    <a href="#1">About-Me</a>
-    <a href="#z2">Skills</a>
-    <a href="#A8">My-Experience</a>
-    <a href="#Q4">Social-Media</a>
-</nav>
+<header class="header active" data-header>
+    <div class="container">
+         <h1>ARAM MOHAMAD</h1>
+
+<nav class="navbar" data-navbar> <ul class="navlist"></ul>
+   <li class="navitem"><a href="#z2" class="navlink">Skills</a></li> 
+   <li class="navitem"><a href="#A8" class="navlink">My-Experience</a></li> 
+   <li class="navitem"><a href="#Q4" class="navlink">Social-Media</a></li>
+</ul></nav>
+
+        <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span>
+        </button>
+
+      </div>
+</header>
+
 <main>
 <section id="A5">
 <P><h2 id="1">About Me:</h2>
-    <ul><li><h3>Hi my name is Aram Mohamad.<BR> i'm an IT student,also i'm a Data analysis. <br> This is my personal web and CV.<br></h3>
+    <ul><li><h3>Hi my name is Aram Mohamad, i'm an IT student,also i'm a Data analysis, This is my personal web and CV.<br></h3>
 <H3 id="RED"> Thanks For Reading!!!</H3></li></ul></P>
 </section>
 
@@ -231,6 +243,37 @@
 </footer>
 
 </main>
+<script>
+    'use strict';
+    const AddEventOnElements = function(elements,eventType,callback){
+    for(let i=0,len=elements.length;i<len;i++){
+    elements[i].addEventListener(eventType,callback);
+    }
+    }
+
+    const navbar = document.querySelector("[data-navbar]");
+    const navToggler = document.querySelector("[data-nav-toggler]");
+    const navLinks = document.querySelectorAll("[data-nav-link]");
+    const toggleNav = function(){
+        navbar.classList.toggle("active");
+        this.classList.toggle("active");
+    }
+
+   navToggler.addEventListener("click",toggleNav);
+    const navClass=() =>{
+        navbar.classList.remove("active");
+        navToggler.classList.remove("active");
+    }
+   AddEventOnElements(navLinks,"click",navClass);
+    const header = document.querySelector("[data-header]");
+    const activeEL=function(){
+       if(window.scrollY > 100){
+            header.classList.add("active");
+        }else{
+           header.classList.remove("active");
+        }
+   }
+    </script>
 </body>
 
 </html>
